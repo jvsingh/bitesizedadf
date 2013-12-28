@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.1.2.66.68" id="DataBindings"
+             SeparateXMLFiles="false" Package="com.singhpora.samples.mongoui" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/Departments.jsff" usageId="com_singhpora_samples_mongoui_DepartmentsPageDef"/>
+    <page path="/Home.jsf" usageId="com_singhpora_samples_mongoui_HomePageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="com_singhpora_samples_mongoui_DepartmentsPageDef"
+          path="com.singhpora.samples.mongoui.pageDefs.DepartmentsPageDef"/>
+    <page id="com_singhpora_samples_mongoui_HomePageDef" path="com.singhpora.samples.mongoui.pageDefs.HomePageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="HRDataControl" path="com.singhpora.model.HRDataControl"/>
+  </dataControlUsages>
+</Application>

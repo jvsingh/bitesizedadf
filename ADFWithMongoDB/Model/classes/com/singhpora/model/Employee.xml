@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<JavaBean xmlns="http://xmlns.oracle.com/adfm/beanmodel" version="11.1.1.61.92"
+          id="Employee" Package="com.singhpora.model"
+          BeanClass="com.singhpora.model.Employee"
+          isJavaBased="true">
+  <Attribute Name="employeeId" Type="java.lang.String" PrecisionRule="false" Precision="0" Scale="0" IsUpdateable="0"
+             PrimaryKey="true"/>
+  <Attribute Name="firstName" Type="java.lang.String"/>
+  <Attribute Name="lastName" Type="java.lang.String"/>
+  <Attribute Name="email" Type="java.lang.String"/>
+  <Attribute Name="phoneNumber" Type="java.lang.String"/>
+  <Attribute Name="jobId" Type="java.lang.String"/>
+  <Attribute Name="hireDate" Type="java.util.Date"/>
+  <ConstructorMethod IsCollection="true"
+                     Type="com.singhpora.model.Employee"
+                     BeanClass="com.singhpora.model.Employee"
+                     id="Employee">
+    <ParameterInfo id="employeeId" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="firstName" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="lastName" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="email" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="phoneNumber" Type="java.lang.String"
+                   isStructured="false"/>
+    <ParameterInfo id="jobId" Type="java.lang.String" isStructured="false"/>
+    <ParameterInfo id="hireDate" Type="java.util.Date" isStructured="false"/>
+  </ConstructorMethod>
+  <ConstructorMethod IsCollection="true"
+                     Type="com.singhpora.model.Employee"
+                     BeanClass="com.singhpora.model.Employee"
+                     id="Employee"/>
+</JavaBean>

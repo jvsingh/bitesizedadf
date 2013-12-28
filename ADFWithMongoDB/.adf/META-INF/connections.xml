@@ -1,0 +1,17 @@
+<References xmlns="http://xmlns.oracle.com/adf/jndi">
+  <Reference name="MongoREST" className="oracle.adf.model.connection.url.HttpURLConnection" xmlns="">
+    <Factory className="oracle.adf.model.connection.url.URLConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="MongoREST">
+        <Contents>
+          <urlconnection name="MongoREST" url="http://127.0.0.1:28017"/>
+        </Contents>
+      </XmlRefAddr>
+    </RefAddresses>
+  </Reference>
+</References>
+
+
+
+
+

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.2.66.68" id="DepartmentsPageDef"
+                Package="com.singhpora.samples.mongoui.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="root" RangeSize="25" DataControl="HRDataControl" id="HRDataControlIterator"
+              ChangeEventPolicy="ppr"/>
+    <accessorIterator MasterBinding="HRDataControlIterator" Binds="departments" RangeSize="25"
+                      DataControl="HRDataControl" BeanClass="com.singhpora.model.Department" id="departmentsIterator"
+                      ChangeEventPolicy="ppr"/>
+    <accessorIterator MasterBinding="departmentsIterator" Binds="employees" RangeSize="25" DataControl="HRDataControl"
+                      BeanClass="com.singhpora.model.Employee" id="employeesIterator" ChangeEventPolicy="ppr"/>
+  </executables>
+  <bindings>
+    <attributeValues IterBinding="departmentsIterator" id="departmentId">
+      <AttrNames>
+        <Item Value="departmentId"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="departmentsIterator" id="departmentName">
+      <AttrNames>
+        <Item Value="departmentName"/>
+      </AttrNames>
+    </attributeValues>
+    <action IterBinding="departmentsIterator" id="First" RequiresUpdateModel="true" Action="first"/>
+    <action IterBinding="departmentsIterator" id="Previous" RequiresUpdateModel="true" Action="previous"/>
+    <action IterBinding="departmentsIterator" id="Next" RequiresUpdateModel="true" Action="next"/>
+    <action IterBinding="departmentsIterator" id="Last" RequiresUpdateModel="true" Action="last"/>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="HRDataControl"/>
+    <action IterBinding="departmentsIterator" id="Create" RequiresUpdateModel="true" Action="createRow"/>
+    <action IterBinding="employeesIterator" id="Create1" RequiresUpdateModel="true" Action="createRow"/>
+    <action IterBinding="employeesIterator" id="Delete" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <action IterBinding="departmentsIterator" id="Delete1" RequiresUpdateModel="false" Action="removeCurrentRow"/>
+    <tree IterBinding="employeesIterator" id="employees">
+      <nodeDefinition DefName="com.singhpora.model.Employee" Name="employees0">
+        <AttrNames>
+          <Item Value="employeeId"/>
+          <Item Value="firstName"/>
+          <Item Value="lastName"/>
+          <Item Value="email"/>
+          <Item Value="phoneNumber"/>
+          <Item Value="jobId"/>
+          <Item Value="hireDate"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

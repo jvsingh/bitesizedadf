@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE PDefViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<PDefViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Department"
+  Version="12.1.2.66.68"
+  StaticDef="com.singhpora.model.Department">
+  <DesignTime>
+    <Attr Name="_DCName" Value="com.singhpora.model.DataControls.HRDataControl"/>
+    <Attr Name="_SDName" Value="com.singhpora.model.Department"/>
+  </DesignTime>
+</PDefViewObject>
